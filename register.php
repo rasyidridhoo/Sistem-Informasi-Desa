@@ -42,7 +42,7 @@
                             <button type="submit" class="btn btn-primary mt-3 w-100" style="background-color: #194B77 ; border-radius: 10px; height: 50px; width: 380px; font-size: 20px;font-family: habibi;">Register</button>
                         </form>
                     </div>
-                    <div class="small mt-5" style="text-align: center;">Sudah daftar? <a href=" login.php">Silahkan login!</a></div>
+                    <div class="small mt-5" style="text-align: center; font-family:habibi; font-size:20px; ">Sudah daftar? <a href=" index.php" style="text-decoration: none;">Silahkan login!</a></div>
                 </div>
             </div>
         </div>

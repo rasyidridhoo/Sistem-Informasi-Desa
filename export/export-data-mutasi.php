@@ -21,13 +21,14 @@
                             <th>No.</th>
                             <th>NIK</th>
                             <th>Nama</th>
-                            <th>Tanggal Mutasi/Pindah</th>
+                            <th>Tanggal Mutasi</th>
                             <th>Sebab</th>
+                            <th>Alamat Mutasi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        $getdatameninggal = mysqli_query($conn, "SELECT data_warga.id_warga, data_warga.nik, data_warga.nama, data_warga_mutasi.tanggal_mutasi, data_warga_mutasi.sebab, data_warga_mutasi.id_warga_mutasi from data_warga_mutasi inner join data_warga on data_warga.id_warga=data_warga_mutasi.id_warga2");
+                        $getdatameninggal = mysqli_query($conn, "SELECT data_warga.id_warga, data_warga.nik, data_warga.nama, data_warga_mutasi.tanggal_mutasi, data_warga_mutasi.sebab, data_warga_mutasi.alamat_mutasi, data_warga_mutasi.id_warga_mutasi from data_warga_mutasi inner join data_warga on data_warga.id_warga=data_warga_mutasi.id_warga2");
                         $i = 1;
                         while ($data = mysqli_fetch_array($getdatameninggal)) {
                         ?>
@@ -37,6 +38,7 @@
                                 <td><?php echo $data['nama']; ?></td>
                                 <td><?php echo $data['tanggal_mutasi']; ?></td>
                                 <td><?php echo $data['sebab']; ?></td>
+                                <td><?php echo $data['alamat_mutasi']; ?></td>
                             </tr>
                         <?php } ?>
                     </tbody>

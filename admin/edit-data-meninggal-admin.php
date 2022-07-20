@@ -65,7 +65,7 @@ if (!isset($_SESSION['login_user'])) {
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a class="navbar-brand" href="dashboard_admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
+            <a class="navbar-brand" href="dashboard-admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -99,45 +99,114 @@ if (!isset($_SESSION['login_user'])) {
                             </a>
 
                             <!-- Jumlah Data -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts" style="color: white;">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Jumlah Data
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="jumlah-data-jenis-kelamin-admin.php">Data Jenis Kelamin</a>
-                                    <a class="nav-link" href="jumlah-data-status-keluarga-admin.php">Data Status Keluarga</a>
-                                    <a class="nav-link" href="jumlah-data-pendidikan-admin.php">Data Pendidikan</a>
-                                    <a class="nav-link" href="jumlah-data-status-perkawinan-admin.php">Data Status Perkawinan</a>
-                                    <a class="nav-link" href="jumlah-data-jenis-bpjs-admin.php">Data Jenis BPJS</a>
-                                    <a class="nav-link" href="jumlah-data-jenis-bansos-admin.php">Data Jenis Bansos</a>
-                                    <a class="nav-link" href="jumlah-data-status-vaksinasi-admin.php">Data Status Vaksinasi</a>
-                                    <a class="nav-link" href="jumlah-data-status-rumah-admin.php">Data Status Rumah</a>
-                                    <a class="nav-link" href="jumlah-data-ktp-admin.php">Data KTP</a>
+                                    <a class="nav-link" href="jumlah-data-jenis-kelamin-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis Kelamin
+                                    </a>
+                                    <a class="nav-link" href="jumlah-data-status-keluarga-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Keluarga
+                                    </a>
+                                    <a class="nav-link" href="jumlah-data-pendidikan-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Pendidikan
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-perkawinan-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Perkawinan
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-jenis-bpjs-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis BPJS
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-jenis-bansos-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis Bansos
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-vaksinasi-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Vaksinasi
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-rumah-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Rumah
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-ktp-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>KTP
+                                    </a>
                                 </nav>
                             </div>
 
                             <a class="nav-link" href="data-warga-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Warga
                             </a>
                             <a class="nav-link" href="data-keluarga-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Keluarga
                             </a>
                             <a class="nav-link" href="data-meninggal-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Meninggal
                             </a>
                             <a class="nav-link" href="data-mutasi-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Mutasi
@@ -159,62 +228,62 @@ if (!isset($_SESSION['login_user'])) {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <h3 class="mt-3">Data Meninggal</h3>
-                        <div class="card mb-4">
+                        <div class="card mb-4 mt-4" style="width: 90%; margin:0 auto;">
                             <div class="card-header">
-                                <!-- Eksport -->
-                                <div class="card card-success">
-                                    <div class="card-header">
-                                        <h3 class="card-title">
-                                            <i class="fa fa-edit"></i> Edit Data
-                                        </h3>
-                                    </div>
-                                    <form action="update-data-meninggal.php" method="post" enctype="multipart/form-data">
-                                        <?php
-                                        $id_warga = $_GET['id_warga_meninggal'];
-                                        $getdatawarga = mysqli_query($conn, "SELECT * FROM data_warga_meninggal join data_warga on data_warga_meninggal.id_warga1=data_warga.id_warga WHERE id_warga_meninggal = '$id_warga'");
-                                        while ($data = mysqli_fetch_array($getdatawarga)) {
-                                        ?>
-                                            <div class="card-body">
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">No Id</label>
-                                                    <div class="col-sm-2">
-                                                        <input type="text" class="form-control" id="id_warga_meninggal" name="id_warga_meninggal" value="<?php echo $data['id_warga_meninggal']; ?>" readonly />
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Nama</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama']; ?>" readonly required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Tanggal Meninggal</label>
-                                                    <div class="col-sm-3">
-                                                        <input type="date" class="form-control" id="tanggal_meninggal" name="tanggal_meninggal" value="<?php echo $data['tanggal_meninggal']; ?>" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 col-form-label">Sebab</label>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" class="form-control" id="sebab" name="sebab" value="<?php echo $data['sebab']; ?>" required>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div class="card-footer">
-                                                <input type="submit" name="Ubah" value="Simpan" class="btn btn-success">
-                                                <a href="?page=data-mendu" title="Kembali" class="btn btn-secondary">Batal</a>
-                                            </div>
-                                        <?php } ?>
-                                    </form>
-                                </div>
+                                <h4 class="text-center" style="font-family: habibi; font-weight: bold;">Edit Data Meninggal</h4>
                             </div>
+                            <form action="update-data-meninggal.php" method="post" enctype="multipart/form-data">
+                                <?php
+                                $id_warga = $_GET['id_warga_meninggal'];
+                                $getdatawarga = mysqli_query($conn, "SELECT * FROM data_warga_meninggal join data_warga on data_warga_meninggal.id_warga1=data_warga.id_warga WHERE id_warga_meninggal = '$id_warga'");
+                                while ($data = mysqli_fetch_array($getdatawarga)) {
+                                ?>
+                                    <div class="card-body">
+
+                                        <!-- <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">No. </label>
+                                            <div class="col-sm-2">
+                                            </div>
+                                        </div> -->
+                                        <input type="hidden" class="form-control" id="id_warga_meninggal" name="id_warga_meninggal" value="<?php echo $data['id_warga_meninggal']; ?>" readonly />
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">Nama</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama']; ?>" readonly required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">Tanggal Meninggal</label>
+                                            <div class="col-sm-3">
+                                                <input type="date" class="form-control" id="tanggal_meninggal" name="tanggal_meninggal" value="<?php echo $data['tanggal_meninggal']; ?>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">Sebab</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="sebab" name="sebab" value="<?php echo $data['sebab']; ?>" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">Sebab</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="sebab" name="sebab" value="<?php echo $data['sebab']; ?>" required>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="card-footer">
+                                        <input type="submit" name="Ubah" value="Simpan" class="btn btn-success">
+                                        <a href="data-meninggal-admin.php" title="Kembali" class="btn btn-secondary">Batal</a>
+                                    </div>
+                                <?php } ?>
+                            </form>
                         </div>
+
                     </div>
                 </main>
             </div>

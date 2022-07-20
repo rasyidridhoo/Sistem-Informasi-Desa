@@ -79,7 +79,7 @@ if (!isset($_SESSION['login_user'])) {
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a class="navbar-brand" href="dashboard_admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
+            <a class="navbar-brand" href="data-warga.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -104,7 +104,7 @@ if (!isset($_SESSION['login_user'])) {
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="data-warga.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Warga
@@ -126,7 +126,7 @@ if (!isset($_SESSION['login_user'])) {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <div class="card mb-4 mt-4" style="width: 90%; margin:0 auto;">
+                        <div class="card mb-4 mt-4">
                             <div class="card-header">
                                 <h4 class="text-center" style="font-family: habibi; font-weight: bold;">Detail Data Warga</h4>
                             </div>
@@ -140,9 +140,9 @@ if (!isset($_SESSION['login_user'])) {
                                     <table class="table table-borderless">
                                         <tbody>
                                             <tr>
-                                                <th width="300px">Nomor Kartu Keluarga</th>
+                                                <th width="20%">Nomor Kartu Keluarga</th>
                                                 <td width="0px">:</td>
-                                                <td width="1500px"><?php echo $data['nokk'] ?></td>
+                                                <td width="80%"><?php echo $data['nokk'] ?></td>
                                             </tr>
                                             <tr>
                                                 <th>NIK</th>

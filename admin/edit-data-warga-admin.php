@@ -79,7 +79,7 @@ if (!isset($_SESSION['login_user'])) {
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a class="navbar-brand" href="dashboard_admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
+            <a class="navbar-brand" href="dashboard-admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -93,7 +93,7 @@ if (!isset($_SESSION['login_user'])) {
                     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                        </svg>&nbsp;pengguna</button>
+                        </svg>&nbsp;admin</button>
                 </li>
             </ul>
         </nav>
@@ -113,45 +113,114 @@ if (!isset($_SESSION['login_user'])) {
                             </a>
 
                             <!-- Jumlah Data -->
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts" style="color: white;">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Jumlah Data
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="jumlah-data-jenis-kelamin-admin.php">Data Jenis Kelamin</a>
-                                    <a class="nav-link" href="jumlah-data-status-keluarga-admin.php">Data Status Keluarga</a>
-                                    <a class="nav-link" href="jumlah-data-pendidikan-admin.php">Data Pendidikan</a>
-                                    <a class="nav-link" href="jumlah-data-status-perkawinan-admin.php">Data Status Perkawinan</a>
-                                    <a class="nav-link" href="jumlah-data-jenis-bpjs-admin.php">Data Jenis BPJS</a>
-                                    <a class="nav-link" href="jumlah-data-jenis-bansos-admin.php">Data Jenis Bansos</a>
-                                    <a class="nav-link" href="jumlah-data-status-vaksinasi-admin.php">Data Status Vaksinasi</a>
-                                    <a class="nav-link" href="jumlah-data-status-rumah-admin.php">Data Status Rumah</a>
-                                    <a class="nav-link" href="jumlah-data-ktp-admin.php">Data KTP</a>
+                                    <a class="nav-link" href="jumlah-data-jenis-kelamin-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis Kelamin
+                                    </a>
+                                    <a class="nav-link" href="jumlah-data-status-keluarga-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Keluarga
+                                    </a>
+                                    <a class="nav-link" href="jumlah-data-pendidikan-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Pendidikan
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-perkawinan-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Perkawinan
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-jenis-bpjs-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis BPJS
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-jenis-bansos-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Jenis Bansos
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-vaksinasi-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Vaksinasi
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-status-rumah-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>Status Rumah
+                                    </a>
+
+                                    <a class="nav-link" href="jumlah-data-ktp-admin.php">
+                                        <div class="sb-nav-link-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-circle" viewBox="0 0 16 16">
+                                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                            </svg>
+                                        </div>KTP
+                                    </a>
                                 </nav>
                             </div>
 
                             <a class="nav-link" href="data-warga-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Warga
                             </a>
                             <a class="nav-link" href="data-keluarga-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Keluarga
                             </a>
                             <a class="nav-link" href="data-meninggal-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Meninggal
                             </a>
                             <a class="nav-link" href="data-mutasi-admin.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Mutasi
@@ -190,22 +259,33 @@ if (!isset($_SESSION['login_user'])) {
                                         <div class="row mb-3">
                                             <label for="nokk" class="col-sm-2 col-form-label">Nomor Kartu Keluarga</label>
                                             <div class="col-sm-10">
-                                                <input type="text" minlength="16" class="form-control" id="nokk" name="nokk" value="<?php echo $data['nokk'] ?>">
+                                                <input type="text" minlength="16" class="form-control" id="nokk" name="nokk" value="<?php echo $data['nokk'] ?>" readonly>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                             <div class="col-sm-10">
-                                                <input type="text" minlength="16" class="form-control" id="nik" name="nik" value="<?php echo $data['nik'] ?>">
+                                                <input type="text" minlength="16" class="form-control" id="nik" name="nik" value="<?php echo $data['nik'] ?>" required>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'] ?>">
+                                                <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'] ?>" required>
                                             </div>
                                         </div>
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Dalam Keluarga</label>
+                                            <div class="col-sm-10">
+                                                <select name="statuskeluarga" id="statuskeluarga" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Suami">Suami</option>
+                                                    <option value="Istri">Istri</option>
+                                                    <option value="Anak">Anak</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Status Dalam keluarga</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -227,8 +307,18 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
-                                        <fieldset class="row mb-3">
+                                        </fieldset> -->
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis Kelamin</label>
+                                            <div class="col-sm-10">
+                                                <select name="jk" id="jk" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Laki-laki">Laki-laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -244,37 +334,55 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
                                         <div class="row mb-3">
                                             <label for="tempatlahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" value="<?php echo $data['tempatlahir'] ?>">
+                                                <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" value="<?php echo $data['tempatlahir'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="tanggallahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                             <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" value="<?php echo $data['tanggallahir'] ?>">
+                                                <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" value="<?php echo $data['tanggallahir'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="usia" class="col-sm-2 col-form-label">Usia</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="usia" name="usia" value="<?php echo $data['usia'] ?>">
+                                                <input type="number" class="form-control" id="usia" name="usia" value="<?php echo $data['usia'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="agama" class="col-sm-2 col-form-label">Agama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="agama" name="agama" value="<?php echo $data['agama'] ?>">
+                                                <input type="text" class="form-control" id="agama" name="agama" value="<?php echo $data['agama'] ?>" required>
                                             </div>
                                         </div>
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Pendidikan</label>
+                                            <div class="col-sm-10">
+                                                <select name="pendidikan" id="pendidikan" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Tidak Bersekolah">Tidak Bersekolah</option>
+                                                    <option value="Belum Bersekolah">Belum Bersekolah</option>
+                                                    <option value="PAUD">PAUD</option>
+                                                    <option value="TK">TK</option>
+                                                    <option value="Sekolah Dasar(SD)">Sekolah Dasar(SD)</option>
+                                                    <option value="SLTP/SEDERAJAT">SLTP/SEDERAJAT</option>
+                                                    <option value="SLTA/SEDERAJAT">SLTA/SEDERAJAT</option>
+                                                    <option value="DIPLOMA/STRATA 1">DIPLOMA/STRATA 1</option>
+                                                    <option value="Putus Sekolah">Putus Sekolah</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Pendidikan</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -332,16 +440,29 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
                                         <div class="row mb-3">
                                             <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="<?php echo $data['pekerjaan'] ?>">
+                                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="<?php echo $data['pekerjaan'] ?>" required>
                                             </div>
                                         </div>
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Perkawinan</label>
+                                            <div class="col-sm-10">
+                                                <select name="statusperkawinan" id="statusperkawinan" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Kawin">Kawin</option>
+                                                    <option value="Belum Kawin">Belum Kawin</option>
+                                                    <option value="Cerai Mati">Cerai Mati</option>
+                                                    <option value="Cerai Hidup">Cerai Hidup</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Status Perkawinan</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -369,9 +490,22 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis BPJS</label>
+                                            <div class="col-sm-10">
+                                                <select name="jenisbpjs" id="jenisbpjs" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Ketenagakerjaan">Ketenagakerjaan</option>
+                                                    <option value="Mandiri">Mandiri</option>
+                                                    <option value="KIS">KIS</option>
+                                                    <option value="Tidak Ada">Tidak Ada</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Jenis BPJS</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -399,9 +533,21 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis Bansos Yang Diterima</label>
+                                            <div class="col-sm-10">
+                                                <select name="jenisbansos" id="jenisbansos" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="PKH">PKH</option>
+                                                    <option value="BPNT">BPNT</option>
+                                                    <option value="Tidak Ada">Tidak Ada</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Jenis Bansos yang diterima</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -423,9 +569,20 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Vaksinasi</label>
+                                            <div class="col-sm-10">
+                                                <select name="statusvaksinasi" id="statusvaksinasi" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Sudah">Sudah</option>
+                                                    <option value="Belum">Belum</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Status Vaksinasi</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -441,9 +598,21 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Rumah Tinggal</label>
+                                            <div class="col-sm-10">
+                                                <select name="statusrumah" id="statusrumah" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Pribadi">Pribadi</option>
+                                                    <option value="Sewa">Sewa</option>
+                                                    <option value="Numpang(ikut Orangtua/Saudara)">Numpang(ikut Orangtua/Saudara)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">Status Rumah Tinggal</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -465,9 +634,20 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
-                                        <fieldset class="row mb-3">
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">KTP yang digunakan</label>
+                                            <div class="col-sm-10">
+                                                <select name="ktp" id="ktp" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="KTP Desa Klari">KTP Desa Klari</option>
+                                                    <option value="KTP Asal">KTP Asal</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- <fieldset class="row mb-3">
                                             <legend class="col-form-label col-sm-2 pt-0">KTP yang digunakan</legend>
                                             <div class="col-sm-10">
                                                 <div class="form-check">
@@ -483,33 +663,33 @@ if (!isset($_SESSION['login_user'])) {
                                                     </label>
                                                 </div>
                                             </div>
-                                        </fieldset>
+                                        </fieldset> -->
 
                                         <div class="row mb-3">
                                             <label for="nohp" class="col-sm-2 col-form-label">Nomor Handphone</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="nohp" name="nohp" value="<?php echo $data['nohp'] ?>">
+                                                <input type="number" class="form-control" id="nohp" name="nohp" value="<?php echo $data['nohp'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="nama" class="col-sm-2 col-form-label">Nama Perusahaan Tempat Kerja</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="namaperusahaan" name="namaperusahaan" value="<?php echo $data['namaperusahaan'] ?>">
+                                                <input type="text" class="form-control" id="namaperusahaan" name="namaperusahaan" value="<?php echo $data['namaperusahaan'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="daerahasal" class="col-sm-2 col-form-label">Daerah Asal (Kabupaten/Provinsi)</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="daerahasal" name="daerahasal" value="<?php echo $data['daerahasal'] ?>">
+                                                <input type="text" class="form-control" id="daerahasal" name="daerahasal" value="<?php echo $data['daerahasal'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="alamatsesuaiktpdesaklari" class="col-sm-2 col-form-label">Alamat Sesuai KTP Desa Klari</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" id="alamatsesuaiktpdesaklari" name="alamatsesuaiktpdesaklari" value="<?php echo $data['alamatsesuaiktpdesaklari'] ?>"> </input>
+                                                <input class="form-control" id="alamatsesuaiktpdesaklari" name="alamatsesuaiktpdesaklari" value="<?php echo $data['alamatsesuaiktpdesaklari'] ?>" required>
                                             </div>
 
                                         </div>
@@ -517,41 +697,46 @@ if (!isset($_SESSION['login_user'])) {
                                         <div class="row mb-3">
                                             <label for="dusunorperum" class="col-sm-2 col-form-label">Dusun/Perum</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="dusunorperum" name="dusunorperum" value="<?php echo $data['dusunorperum'] ?>">
+                                                <input type="text" class="form-control" id="dusunorperum" name="dusunorperum" value="<?php echo $data['dusunorperum'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="rt" class="col-sm-2 col-form-label">RT</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="rt" name="rt" value="<?php echo $data['rt'] ?>">
+                                                <input type="number" class="form-control" id="rt" name="rt" value="<?php echo $data['rt'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="rw" class="col-sm-2 col-form-label">RW</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="rw" name="rw" value="<?php echo $data['rw'] ?>">
+                                                <input type="number" class="form-control" id="rw" name="rw" value="<?php echo $data['rw'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="domisilisekarang" class="col-sm-2 col-form-label">Alamat Domisili sekarang</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" id="domisilisekarang" name="domisilisekarang" value="<?php echo $data['domisilisekarang'] ?>"></input>
+                                                <input class="form-control" id="domisilisekarang" name="domisilisekarang" value="<?php echo $data['domisilisekarang'] ?>" required></input>
                                             </div>
                                         </div>
-
-                                        <button type="submit" class="btn btn-primary float-end">Update</button>
-                                    <?php } ?>
-                                </form>
-
-
                             </div>
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                                <a href="data-warga-admin.php" title="Kembali" class="btn btn-danger">Batal</a>
+                            </div>
+
+                        <?php } ?>
+                        </form>
+
+
                         </div>
                     </div>
-                </main>
             </div>
+            </main>
+        </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>

@@ -9,7 +9,7 @@ $sql = mysqli_query($conn, "insert into users(nama_user, nokk, email, password, 
 
 if ($sql) {
     echo "<script> alert ('Anda berhasil mendaftar')</script>";
-    header("refresh:0; login.php");
+    header("refresh:0; index.php");
 } else {
     echo "<script> alert ('Anda gagal mendaftar')</script>";
     header("refresh:0; register.php");

@@ -26,6 +26,6 @@ if (isset($_POST['submit'])) {
         }
     } else {
         echo "<script> alert ('Anda gagal login, silahkan lakukan ulang')</script>";
-        header("refresh:0; login.php");
+        header("refresh:0; index.php");
     }
 }

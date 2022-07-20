@@ -4,10 +4,11 @@ include("../koneksi.php");
 
 if (isset($_POST['Simpan'])) {
     //mulai proses simpan data
-    $sql_simpan = "INSERT INTO data_warga_mutasi (id_warga2, tanggal_mutasi, sebab) VALUES (
+    $sql_simpan = "INSERT INTO data_warga_mutasi (id_warga2, tanggal_mutasi, sebab, alamat_mutasi) VALUES (
 			'" . $_POST['id_warga2'] . "',
             '" . $_POST['tanggal_mutasi'] . "',
-            '" . $_POST['sebab'] . "')";
+            '" . $_POST['sebab'] . "',
+            '" . $_POST['alamat_mutasi'] . "')";
     $query_simpan = mysqli_query($conn, $sql_simpan);
 
     $sql_ubah = "UPDATE data_warga SET 

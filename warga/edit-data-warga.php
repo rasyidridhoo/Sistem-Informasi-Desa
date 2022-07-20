@@ -79,7 +79,7 @@ if (!isset($_SESSION['login_user'])) {
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a class="navbar-brand" href="dashboard_admin.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
+            <a class="navbar-brand" href="data-warga.php" style="font-family:roboto; font-weight:bold;">SIDESA</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
@@ -104,7 +104,7 @@ if (!isset($_SESSION['login_user'])) {
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="data-warga.php">
-                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
+                                <div class="sb-nav-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-table" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z" />
                                     </svg></div>
                                 Data Warga
@@ -149,320 +149,189 @@ if (!isset($_SESSION['login_user'])) {
                                         <div class="row mb-3">
                                             <label for="nik" class="col-sm-2 col-form-label">NIK</label>
                                             <div class="col-sm-10">
-                                                <input type="text" minlength="16" class="form-control" id="nik" name="nik" value="<?php echo $data['nik'] ?>">
+                                                <input type="text" minlength="16" class="form-control" id="nik" name="nik" value="<?php echo $data['nik'] ?>" required>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <label for="nama" class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'] ?>">
+                                                <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama'] ?>" required>
                                             </div>
                                         </div>
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Status Dalam keluarga</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Dalam Keluarga</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statuskeluarga" id="suami" value="Suami">
-                                                    <label class="form-check-label" for="suami">
-                                                        Suami
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statuskeluarga" id="istri" value="Istri">
-                                                    <label class="form-check-label" for="istri">
-                                                        Istri
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statuskeluarga" id="anak" value="Anak">
-                                                    <label class="form-check-label" for="anak">
-                                                        Anak
-                                                    </label>
-                                                </div>
+                                                <select name="statuskeluarga" id="statuskeluarga" class="form-select" aria-label="Default select example" required="">
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Suami">Suami</option>
+                                                    <option value="Istri">Istri</option>
+                                                    <option value="Anak">Anak</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin</legend>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis Kelamin</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jk" id="laki" value="Laki-laki">
-                                                    <label class="form-check-label" for="laki">
-                                                        Laki-laki
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jk" id="perempuan" value="Perempuan">
-                                                    <label class="form-check-label" for="perempuan">
-                                                        Perempuan
-                                                    </label>
-                                                </div>
+                                                <select name="jk" id="jk" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Laki-laki">Laki-laki</option>
+                                                    <option value="Perempuan">Perempuan</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
                                         <div class="row mb-3">
                                             <label for="tempatlahir" class="col-sm-2 col-form-label">Tempat Lahir</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" value="<?php echo $data['tempatlahir'] ?>">
+                                                <input type="text" class="form-control" id="tempatlahir" name="tempatlahir" value="<?php echo $data['tempatlahir'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="tanggallahir" class="col-sm-2 col-form-label">Tanggal Lahir</label>
                                             <div class="col-sm-10">
-                                                <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" value="<?php echo $data['tanggallahir'] ?>">
+                                                <input type="date" class="form-control" id="tanggallahir" name="tanggallahir" value="<?php echo $data['tanggallahir'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="usia" class="col-sm-2 col-form-label">Usia</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="usia" name="usia" value="<?php echo $data['usia'] ?>">
+                                                <input type="number" class="form-control" id="usia" name="usia" value="<?php echo $data['usia'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="agama" class="col-sm-2 col-form-label">Agama</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="agama" name="agama" value="<?php echo $data['agama'] ?>">
+                                                <input type="text" class="form-control" id="agama" name="agama" value="<?php echo $data['agama'] ?>" required>
                                             </div>
                                         </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Pendidikan</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Pendidikan</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="tb" value="Tidak Bersekolah">
-                                                    <label class="form-check-label" for="tb">
-                                                        Tidak Bersekolah
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="bb" value="Belum Bersekolah">
-                                                    <label class="form-check-label" for="bb">
-                                                        Belum Bersekolah
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="paud" value="PAUD">
-                                                    <label class="form-check-label" for="paud">
-                                                        PAUD
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="tk" value="TK">
-                                                    <label class="form-check-label" for="tk">
-                                                        TK
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="sd" value="Sekolah Dasar(SD)">
-                                                    <label class="form-check-label" for="sd">
-                                                        Sekolah Dasar(SD)
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="sltp" value="SLTP/SEDERAJAT">
-                                                    <label class="form-check-label" for="sltp">
-                                                        SLTP/SEDERAJAT
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="slta" value="SLTA/SEDERAJAT">
-                                                    <label class="form-check-label" for="slta">
-                                                        SLTA/SEDERAJAT
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="st" value="DIPLOMA/STRATA 1">
-                                                    <label class="form-check-label" for="st">
-                                                        DIPLOMA/STRATA 1
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="pendidikan" id="ps" value="Putus Sekolah">
-                                                    <label class="form-check-label" for="ps">
-                                                        Putus Sekolah
-                                                    </label>
-                                                </div>
+                                                <select name="pendidikan" id="pendidikan" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Tidak Bersekolah">Tidak Bersekolah</option>
+                                                    <option value="Belum Bersekolah">Belum Bersekolah</option>
+                                                    <option value="PAUD">PAUD</option>
+                                                    <option value="TK">TK</option>
+                                                    <option value="Sekolah Dasar(SD)">Sekolah Dasar(SD)</option>
+                                                    <option value="SLTP/SEDERAJAT">SLTP/SEDERAJAT</option>
+                                                    <option value="SLTA/SEDERAJAT">SLTA/SEDERAJAT</option>
+                                                    <option value="DIPLOMA/STRATA 1">DIPLOMA/STRATA 1</option>
+                                                    <option value="Putus Sekolah">Putus Sekolah</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
                                         <div class="row mb-3">
                                             <label for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="<?php echo $data['pekerjaan'] ?>">
+                                                <input type="text" class="form-control" id="pekerjaan" name="pekerjaan" value="<?php echo $data['pekerjaan'] ?>" required>
                                             </div>
                                         </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Status Perkawinan</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Perkawinan</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusperkawinan" id="kawin" value="Kawin">
-                                                    <label class="form-check-label" for="kawin">
-                                                        Kawin
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusperkawinan" id="mandiri" value="Belum Kawin">
-                                                    <label class="form-check-label" for="mandiri">
-                                                        Belum Kawin
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusperkawinan" id="ceraimati" value="Cerai Mati">
-                                                    <label class="form-check-label" for="ceraimati">
-                                                        Cerai Mati
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusperkawinan" id="ceraihidup" value="Cerai Hidup">
-                                                    <label class="form-check-label" for="ceraihidup">
-                                                        Cerai Hidup
-                                                    </label>
-                                                </div>
+                                                <select name="statusperkawinan" id="statusperkawinan" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Kawin">Kawin</option>
+                                                    <option value="Belum Kawin">Belum Kawin</option>
+                                                    <option value="Cerai Mati">Cerai Mati</option>
+                                                    <option value="Cerai Hidup">Cerai Hidup</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Jenis BPJS</legend>
-                                            <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbpjs" id="ketenagakerjaan" value="Ketenagakerjaan">
-                                                    <label class="form-check-label" for="ketenagakerjaan">
-                                                        Ketenagakerjaan
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbpjs" id="mandiri" value="Mandiri">
-                                                    <label class="form-check-label" for="mandiri">
-                                                        Mandiri
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbpjs" id="kis" value="KIS">
-                                                    <label class="form-check-label" for="kis">
-                                                        KIS
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbpjs" id="tidakadabpjs" value="Tidak Ada">
-                                                    <label class="form-check-label" for="tidakadabpjs">
-                                                        Tidak Ada
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </fieldset>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Jenis Bansos yang diterima</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis BPJS</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbansos" id="pkh" value="PKH">
-                                                    <label class="form-check-label" for="pkh">
-                                                        PKH
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbansos" id="bpnt" value="BPNT">
-                                                    <label class="form-check-label" for="bpnt">
-                                                        BPNT
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="jenisbansos" id="tidakadabansos" value="Tidak Ada">
-                                                    <label class="form-check-label" for="tidakadabansos">
-                                                        Tidak Ada
-                                                    </label>
-                                                </div>
+                                                <select name="jenisbpjs" id="jenisbpjs" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Ketenagakerjaan">Ketenagakerjaan</option>
+                                                    <option value="Mandiri">Mandiri</option>
+                                                    <option value="KIS">KIS</option>
+                                                    <option value="Tidak Ada">Tidak Ada</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Status Vaksinasi</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Jenis Bansos Yang Diterima</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusvaksinasi" id="sudah" value="Sudah">
-                                                    <label class="form-check-label" for="sudah">
-                                                        Sudah
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusvaksinasi" id="belum" value="Belum">
-                                                    <label class="form-check-label" for="belum">
-                                                        Belum
-                                                    </label>
-                                                </div>
+                                                <select name="jenisbansos" id="jenisbansos" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="PKH">PKH</option>
+                                                    <option value="BPNT">BPNT</option>
+                                                    <option value="Tidak Ada">Tidak Ada</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">Status Rumah Tinggal</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Vaksinasi</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusrumah" id="pribadi" value="Pribadi">
-                                                    <label class="form-check-label" for="pribadi">
-                                                        Pribadi
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusrumah" id="sewa" value="Sewa">
-                                                    <label class="form-check-label" for="sewa">
-                                                        Sewa
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="statusrumah" id="numpang" value="Numpang(ikut Orangtua/Saudara)">
-                                                    <label class="form-check-label" for="numpang">
-                                                        Numpang(ikut Orangtua/Saudara)
-                                                    </label>
-                                                </div>
+                                                <select name="statusvaksinasi" id="statusvaksinasi" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Sudah">Sudah</option>
+                                                    <option value="Belum">Belum</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
 
-                                        <fieldset class="row mb-3">
-                                            <legend class="col-form-label col-sm-2 pt-0">KTP yang digunakan</legend>
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">Status Rumah Tinggal</label>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="ktp" id="klari" value="KTP Desa Klari">
-                                                    <label class="form-check-label" for="klari">
-                                                        KTP Desa Klari
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="ktp" id="asal" value="KTP Asal">
-                                                    <label class="form-check-label" for="asal">
-                                                        KTP Asal
-                                                    </label>
-                                                </div>
+                                                <select name="statusrumah" id="statusrumah" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="Pribadi">Pribadi</option>
+                                                    <option value="Sewa">Sewa</option>
+                                                    <option value="Numpang(ikut Orangtua/Saudara)">Numpang(ikut Orangtua/Saudara)</option>
+                                                </select>
                                             </div>
-                                        </fieldset>
+                                        </div>
+
+                                        <div class="row mb-3">
+                                            <label class=" col-sm-2 col-form-label">KTP yang digunakan</label>
+                                            <div class="col-sm-10">
+                                                <select name="ktp" id="ktp" class="form-select" aria-label="Default select example" required>
+                                                    <option disabled selected value>- Pilih -</option>
+                                                    <option value="KTP Desa Klari">KTP Desa Klari</option>
+                                                    <option value="KTP Asal">KTP Asal</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
                                         <div class="row mb-3">
                                             <label for="nohp" class="col-sm-2 col-form-label">Nomor Handphone</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="nohp" name="nohp" value="<?php echo $data['nohp'] ?>">
+                                                <input type="number" class="form-control" id="nohp" name="nohp" value="<?php echo $data['nohp'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="nama" class="col-sm-2 col-form-label">Nama Perusahaan Tempat Kerja</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="namaperusahaan" name="namaperusahaan" value="<?php echo $data['namaperusahaan'] ?>">
+                                                <input type="text" class="form-control" id="namaperusahaan" name="namaperusahaan" value="<?php echo $data['namaperusahaan'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="daerahasal" class="col-sm-2 col-form-label">Daerah Asal (Kabupaten/Provinsi)</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="daerahasal" name="daerahasal" value="<?php echo $data['daerahasal'] ?>">
+                                                <input type="text" class="form-control" id="daerahasal" name="daerahasal" value="<?php echo $data['daerahasal'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="alamatsesuaiktpdesaklari" class="col-sm-2 col-form-label">Alamat Sesuai KTP Desa Klari</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" id="alamatsesuaiktpdesaklari" name="alamatsesuaiktpdesaklari" value="<?php echo $data['alamatsesuaiktpdesaklari'] ?>"> </input>
+                                                <input class="form-control" id="alamatsesuaiktpdesaklari" name="alamatsesuaiktpdesaklari" value="<?php echo $data['alamatsesuaiktpdesaklari'] ?>" required> </input>
                                             </div>
 
                                         </div>
@@ -470,41 +339,47 @@ if (!isset($_SESSION['login_user'])) {
                                         <div class="row mb-3">
                                             <label for="dusunorperum" class="col-sm-2 col-form-label">Dusun/Perum</label>
                                             <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="dusunorperum" name="dusunorperum" value="<?php echo $data['dusunorperum'] ?>">
+                                                <input type="text" class="form-control" id="dusunorperum" name="dusunorperum" value="<?php echo $data['dusunorperum'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="rt" class="col-sm-2 col-form-label">RT</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="rt" name="rt" value="<?php echo $data['rt'] ?>">
+                                                <input type="number" class="form-control" id="rt" name="rt" value="<?php echo $data['rt'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="rw" class="col-sm-2 col-form-label">RW</label>
                                             <div class="col-sm-10">
-                                                <input type="number" class="form-control" id="rw" name="rw" value="<?php echo $data['rw'] ?>">
+                                                <input type="number" class="form-control" id="rw" name="rw" value="<?php echo $data['rw'] ?>" required>
                                             </div>
                                         </div>
 
                                         <div class="row mb-3">
                                             <label for="domisilisekarang" class="col-sm-2 col-form-label">Alamat Domisili sekarang</label>
                                             <div class="col-sm-10">
-                                                <input class="form-control" id="domisilisekarang" name="domisilisekarang" value="<?php echo $data['domisilisekarang'] ?>"></input>
+                                                <input class="form-control" id="domisilisekarang" name="domisilisekarang" value="<?php echo $data['domisilisekarang'] ?>" required></input>
                                             </div>
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary float-end">Update</button>
-                                    <?php } ?>
-                                </form>
-
-
                             </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Update</button>
+                                <a href="data-warga.php" title="Kembali" class="btn btn-danger">Batal</a>
+                            </div>
+
+
+                        <?php } ?>
+                        </form>
+
+
                         </div>
                     </div>
-                </main>
             </div>
+            </main>
+        </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="../js/scripts.js"></script>
