@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2022 at 02:45 PM
+-- Generation Time: Jul 21, 2022 at 12:55 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -62,19 +62,12 @@ CREATE TABLE `data_warga` (
 --
 
 INSERT INTO `data_warga` (`id_warga`, `nokk`, `nik`, `nama`, `statuskeluarga`, `jk`, `tempatlahir`, `tanggallahir`, `usia`, `agama`, `pendidikan`, `pekerjaan`, `statusperkawinan`, `jenisbpjs`, `jenisbansos`, `statusvaksinasi`, `statusrumah`, `ktp`, `nohp`, `namaperusahaan`, `daerahasal`, `alamatsesuaiktpdesaklari`, `dusunorperum`, `rt`, `rw`, `domisilisekarang`, `status`) VALUES
-(22, '3215051105010012', '3215051105010012', 'Faadlilah Ahmad P', 'Anak', 'Laki-laki', 'karawang', '2022-07-08', 22, 'islam', 'PAUD', '', '', '', '', 'Sudah', 'Pribadi', 'KTP Asal', 2147483647, 'Google', 'Kab. Karawang', 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'sirnabaya', 1, 5, 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'Meninggal'),
-(23, '3215051105010012', '3215051105010017', 'Muhamad Taopik', 'Suami', 'Laki-laki', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(24, '3215051105010012', '3215051105010015', 'Intan Permatasari', 'Istri', 'Perempuan', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(27, '', '', 'iman', '', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(28, '3215025252525', '', '', '', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Ada'),
-(31, '3215051105010012', '321', 'Raisa Andriana', 'Istri', 'Perempuan', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(32, '', '123', 'Faadlilah Ahmad Purwanto', 'Suami', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(33, '', '321', 'Faadlilah Ahmad Purwanto', 'Suami', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(34, '', '', '', 'Suami', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Ada'),
-(35, '', '23', 'Faadlilah Ahmad Purwanto', 'Suami', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Pindah'),
-(36, '3215022222222', '32', 'Faadlilah Ahmad Purwanto', 'Suami', '', 'karawang', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Ada'),
-(37, '321555', '321', 'rick', '', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Meninggal'),
-(38, '321505110501899', '3213123213123212', 'faad', 'Suami', '', '', '0000-00-00', 0, '', '', '', '', '', '', '', '', '', 0, '', '', ' ', '', 0, 0, '', 'Pindah');
+(41, '3215033009876524', '3215033006548954', 'Faadlilah Ahmad Purwanto', 'Suami', 'Laki-laki', 'Karawang', '2000-05-30', 22, 'Islam', 'DIPLOMA/STRATA 1', 'Programmer & Data Analyst', 'Kawin', 'Ketenagakerjaan', 'Tidak Ada', 'Sudah', 'Pribadi', 'KTP Asal', 2147483647, 'The Walt Disney Company', 'Karawang/Jawa Barat', 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'Sirnabaya', 1, 5, 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'Ada'),
+(42, '3215033009876524', '3215033005489654', 'Fauziah Aska', 'Istri', 'Perempuan', 'Karawang', '2000-03-17', 22, 'Islam', 'DIPLOMA/STRATA 1', 'IRT', 'Kawin', 'Mandiri', 'Tidak Ada', 'Sudah', 'Pribadi', 'KTP Asal', 2147483647, '.', 'Kab. Karawang', 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'Sirnabaya', 1, 5, 'SIRNABAYA INDAH BLOK.C4/01, RT/RW 001/005, Kel/Desa SIRNABAYA, Kecamatan TELUKJAMBE TIMUR', 'Ada'),
+(43, '3215068974562315', '3215065489565456', 'Raisa Andriana', 'Istri', 'Perempuan', 'Jakarta', '1990-06-06', 32, 'Islam', 'DIPLOMA/STRATA 1', 'Penyanyi', 'Cerai Hidup', 'Ketenagakerjaan', 'BPNT', 'Sudah', 'Sewa', 'KTP Desa Klari', 2147483647, 'Juni Records', 'Komplek Bumi Daya Blok D no.7, Bukit Cinere, Cinere. Depok, Jawa Barat', ' Jl. Lemahmulya, Klari, Karawang, Jawa Barat', 'Klari', 1, 1, ' Jl. Lemahmulya, Klari, Karawang, Jawa Barat', 'Ada'),
+(44, '3215068974562315', '0000000000000000', 'Indah Kus', 'Anak', 'Perempuan', 'Jakarta', '2010-02-02', 12, 'Islam', 'Sekolah Dasar(SD)', '.', 'Belum Kawin', 'Tidak Ada', 'Tidak Ada', 'Sudah', 'Numpang(ikut Orangtua/Saudara)', 'KTP Desa Klari', 2147483647, '.', 'Komplek Bumi Daya Blok D no.7, Bukit Cinere, Cinere. Depok, Jawa Barat', ' Jl. Lemahmulya, Klari, Karawang, Jawa Barat', 'Desa Klari', 1, 1, ' Jl. Lemahmulya, Klari, Karawang, Jawa Barat', 'Ada'),
+(45, '3215689654000256', '3215689654222658', 'Kanye West', 'Suami', 'Laki-laki', 'Purwakarta', '1994-04-01', 28, 'Kristen', 'DIPLOMA/STRATA 1', 'Rapper', 'Cerai Mati', 'Ketenagakerjaan', 'BPNT', 'Belum', 'Sewa', 'KTP Asal', 2147483647, 'Atlanta .co', 'Chicago, Illinois, A.S', 'Atlanta, Georgia', 'Atlanta', 0, 0, 'Atlanta, Georgia', 'Ada'),
+(46, '3215689654000256', '3215656545682666', 'Kim Kardashian', 'Istri', 'Perempuan', 'Los Angeles', '1980-08-06', 41, 'Budha', 'Putus Sekolah', 'Penyanyi', 'Kawin', 'Mandiri', 'BPNT', 'Belum', 'Sewa', 'KTP Asal', 2147483647, 'Keeping Up with the Kardashians .inc', 'Los Angeles, US', ' .', 'Klari', 0, 0, 'Klari', 'Meninggal');
 
 -- --------------------------------------------------------
 
@@ -94,8 +87,7 @@ CREATE TABLE `data_warga_meninggal` (
 --
 
 INSERT INTO `data_warga_meninggal` (`id_warga_meninggal`, `id_warga1`, `tanggal_meninggal`, `sebab`) VALUES
-(17, 32, '2022-06-30', 'kesele455 salak 22'),
-(18, 33, '2022-07-09', 'keselek salak 2');
+(19, 46, '2019-07-10', 'Serangan Jantung');
 
 -- --------------------------------------------------------
 
@@ -107,15 +99,9 @@ CREATE TABLE `data_warga_mutasi` (
   `id_warga_mutasi` int(10) NOT NULL,
   `id_warga2` int(20) NOT NULL,
   `tanggal_mutasi` date NOT NULL,
-  `sebab` varchar(20) NOT NULL
+  `sebab` varchar(20) NOT NULL,
+  `alamat_mutasi` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `data_warga_mutasi`
---
-
-INSERT INTO `data_warga_mutasi` (`id_warga_mutasi`, `id_warga2`, `tanggal_mutasi`, `sebab`) VALUES
-(2, 38, '2022-07-09', 'keselek salak 22');
 
 -- --------------------------------------------------------
 
@@ -137,14 +123,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama_user`, `nokk`, `email`, `password`, `status_user`) VALUES
-(1, 'Mohamad Rasyid Ridho', '3215051105010012', 'edo2340@gmail.com', '110501', 'warga'),
-(4, 'Faadlilah', '', 'faadli12@gmail.com', '123456', 'admin'),
-(5, 'Raisa Andriana', '321505110501899', 'raisa@gmail.com', '123456', 'warga'),
-(6, 'dewa19', '321321321321321', 'dewa19@gmail.com', '123', 'warga'),
-(7, 'iman vellani', '3215025252525', 'iman@gmail.com', '123', 'warga'),
-(8, 'ahmad purwanto', '3215022222222', 'purwanto@gmail.com', '123', 'warga'),
-(9, 'rick and morty', '321555', 'rm@gmail.com', '123', 'warga'),
-(10, 'Faadlilah Ahmad Purwanto', '321', 'pfaadlilahahmad@gmail.com', '32132132321', 'warga');
+(4, 'Admin Desa Klari', '', 'admin@gmail.com', '12345678', 'admin'),
+(11, 'Faadlilah Ahmad Purwanto', '3215033009876524', 'faadlilahahmad@gmail.com', '12345678', 'warga'),
+(12, 'Raisa Andriana', '3215068974562315', 'raisa@gmail.com', '12345678', 'warga'),
+(13, 'Kanye West', '3215689654000256', 'kanye@gmail.com', '12345678', 'warga');
 
 --
 -- Indexes for dumped tables
@@ -184,13 +166,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `data_warga`
 --
 ALTER TABLE `data_warga`
-  MODIFY `id_warga` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id_warga` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `data_warga_meninggal`
 --
 ALTER TABLE `data_warga_meninggal`
-  MODIFY `id_warga_meninggal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_warga_meninggal` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `data_warga_mutasi`
@@ -202,7 +184,7 @@ ALTER TABLE `data_warga_mutasi`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables

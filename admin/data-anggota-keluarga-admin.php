@@ -75,10 +75,14 @@ if (!isset($_SESSION['login_user'])) {
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
+                    <?php
+                    $user = $_SESSION['login_akun'];
+                    $as =  $_SESSION['login_as'];
+                    ?>
                     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" style="text-decoration: none;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
                             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                        </svg>&nbsp;admin</button>
+                        </svg>&nbsp;<?php echo $user, " - ", $as  ?></button>
                 </li>
             </ul>
         </nav>
@@ -245,14 +249,14 @@ if (!isset($_SESSION['login_user'])) {
                                                 <th>NIK</th>
                                                 <th>Nama</th>
                                                 <th>Status Anggota KK</th>
-                                                <th>Status</th>
+                                                <!-- <th>Status</th> -->
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
                                             $i = 1;
                                             $nokk = $_GET['nokk'];
-                                            $getdatakeluarga = mysqli_query($conn, "SELECT * FROM data_warga where nokk='$nokk'");
+                                            $getdatakeluarga = mysqli_query($conn, "SELECT * FROM data_warga where nokk='$nokk' and status='Ada'");
                                             while ($cek = mysqli_fetch_assoc($getdatakeluarga)) {
                                                 $nokk = $cek['nokk'];
                                                 $nik = $cek['nik'];
@@ -266,7 +270,6 @@ if (!isset($_SESSION['login_user'])) {
                                                     <td><?php echo $nik ?></td>
                                                     <td><?php echo $nama ?></td>
                                                     <td><?php echo $statuskeluarga ?></td>
-                                                    <td><?php echo $status ?></td>
 
                                                 </tr>
                                             <?php } ?>

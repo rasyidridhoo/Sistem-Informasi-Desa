@@ -10,6 +10,11 @@
     <title>Register</title>
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,24 +27,24 @@
                         <form method="POST" action="register-proses.php">
                             <div class="mb-3">
                                 <label class="mb-2" style="font-family: habibi; font-size: 20px;">Nama</label>
-                                <input type="text" class="form-control" name="nama" required style="border-radius: 10px; height: 50px; font-size: 20px; font-family: habibi;">
+                                <input type="text" class="form-control" name="nama" required style="border-radius: 10px; font-family: habibi; font-size: 20px;">
                             </div>
                             <div class="mb-3">
                                 <label class="mb-2" style="font-family: habibi; font-size: 20px;">No Kartu Keluarga</label>
-                                <input type="text" class="form-control" name="nokk" minlength="16" required style="border-radius: 10px; height: 50px; font-size: 20px; font-family: habibi;">
+                                <input type="text" class="form-control" name="nokk" minlength="16" required style="border-radius: 10px; font-family: habibi; font-size: 20px;">
                             </div>
                             <div class="mb-3">
                                 <label class="mb-2" style="font-family: habibi; font-size: 20px;">Email</label>
-                                <input type="email" class="form-control" name="email" required style="border-radius: 10px; height: 50px; font-size: 20px; font-family: habibi;">
+                                <input type="email" class="form-control" name="email" required style="border-radius: 10px; font-family: habibi; font-size: 20px;">
                             </div>
                             <div class="mb-3">
                                 <label class="mb-2" style="font-family: habibi; font-size: 20px;">Password</label>
-                                <input type="password" class="form-control" name="password" minlength="8" required style="border-radius: 10px; height: 50px; font-size: 20px; font-family: habibi;">
+                                <input type="password" class="form-control" name="password" minlength="8" required style="border-radius: 10px; font-family: habibi; font-size: 20px;">
                             </div>
 
-                            <input type="hidden" class="form-control" name="status_user" required value="warga">
+                            <input type="hidden" class="form-control" name="status_user" required value="Warga">
 
-                            <button type="submit" class="btn btn-primary mt-3 w-100" style="background-color: #194B77 ; border-radius: 10px; height: 50px; width: 380px; font-size: 20px;font-family: habibi;">Register</button>
+                            <button type="submit" class="btn btn-primary mt-3 w-100" style="background-color: #194B77 ; border-radius: 10px; width: 380px; font-size: 20px;font-family: habibi;">Register</button>
                         </form>
                     </div>
                     <div class="small mt-5" style="text-align: center; font-family:habibi; font-size:20px; ">Sudah daftar? <a href=" index.php" style="text-decoration: none;">Silahkan login!</a></div>

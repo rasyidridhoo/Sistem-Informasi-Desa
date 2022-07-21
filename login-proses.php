@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
     $hasil = mysqli_fetch_array($cek_data);
     $status_user = $hasil['status_user'];
     $login_user = $hasil['email'];
+    $akun = $hasil['nama_user'];
     $row = mysqli_num_rows($cek_data);
 
     // Pengecekan Kondisi Login Berhasil/Tidak
@@ -16,11 +17,13 @@ if (isset($_POST['submit'])) {
         session_start();
         $_SESSION['login_id'] = $hasil['id_user'];
         $_SESSION['login_user'] = $login_user;
+        $_SESSION['login_akun'] = $akun;
+        $_SESSION['login_as'] = $status_user;
 
-        if ($status_user == 'admin') {
+        if ($status_user == 'Admin') {
             echo "<script> alert ('Anda berhasil login sebagai admin')</script>";
             header('refresh:0; admin/dashboard-admin.php');
-        } elseif ($status_user == 'warga') {
+        } elseif ($status_user == 'Warga') {
             echo "<script> alert ('Anda berhasil login sebagai warga')</script>";
             header('refresh:0; warga/data-warga.php');
         }

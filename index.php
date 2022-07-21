@@ -21,6 +21,7 @@
         label {
             font-family: Habibi;
             font-size: 20px;
+            font-weight: bold;
         }
 
         a {
@@ -42,23 +43,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-5">
-                <div class="card shadow-lg border-0 rounded-lg mt-5" style="background-color: #f1f1f1;">
+                <div class="card border-0 rounded-lg mt-5" style="background-color: #f1f1f1;">
                     <h3 class="text-center font-weight-light my-4">SIDESA</h3>
                     <div class="card-body">
                         <div class="container">
                             <form method="POST" action="login-proses.php">
                                 <div class="mb-3">
                                     <label class="mb-2">Email</label>
-                                    <input type="email" class="form-control" name="email" required>
+                                    <input type="email" class="form-control" name="email" required style="border-radius: 10px; font-size: 20px; font-family: habibi;">
                                 </div>
                                 <div class="mb-3">
                                     <label class="mb-2">Password</label>
-                                    <input type="password" class="form-control" name="password" required>
+                                    <input type="password" class="form-control" name="password" required style="border-radius: 10px; font-size: 20px; font-family: habibi;">
                                 </div style="background-color: #194b77;">
-                                <button type="submit" name="submit" class="btn btn-primary mt-2 w-100">Login</button>
+                                <button type="submit" name="submit" class="btn btn-primary mt-3 w-100" class="btn btn-primary mt-3 w-100" style="background-color: #194B77 ; border-radius: 10px; font-size: 20px;font-family: habibi;">Login</button>
                             </form>
                         </div>
-                        <div class="small mt-5" style="text-align: center; font-family:habibi; font-size:20px;"> Belum punya akun? <a href=" register.php">Registrasi disini!</a></div>
+                        <div class=" small mt-5" style="text-align: center; font-family:habibi; font-size:20px;"> Belum punya akun? <a href=" register.php">Registrasi disini!</a>
+                        </div>
                     </div>
                 </div>
             </div>
