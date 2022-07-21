@@ -255,6 +255,13 @@ if (!isset($_SESSION['login_user'])) {
                                         <input type="hidden" class="form-control" id="id_warga_meninggal" name="id_warga_meninggal" value="<?php echo $data['id_warga_meninggal']; ?>" readonly />
 
                                         <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">NIK</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="nik" name="nik" value="<?php echo $data['nik']; ?>" readonly required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
                                             <label class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama']; ?>" readonly required>
@@ -265,13 +272,6 @@ if (!isset($_SESSION['login_user'])) {
                                             <label class="col-sm-2 col-form-label">Tanggal Meninggal</label>
                                             <div class="col-sm-3">
                                                 <input type="date" class="form-control" id="tanggal_meninggal" name="tanggal_meninggal" value="<?php echo $data['tanggal_meninggal']; ?>" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="row mb-3">
-                                            <label class="col-sm-2 col-form-label">Sebab</label>
-                                            <div class="col-sm-6">
-                                                <input type="text" class="form-control" id="sebab" name="sebab" value="<?php echo $data['sebab']; ?>" required>
                                             </div>
                                         </div>
 

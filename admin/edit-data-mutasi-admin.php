@@ -255,6 +255,13 @@ if (!isset($_SESSION['login_user'])) {
                                         <input type="hidden" class="form-control" id="id_warga_mutasi" name="id_warga_mutasi" value="<?php echo $data['id_warga_mutasi']; ?>" readonly />
 
                                         <div class="row mb-3">
+                                            <label class="col-sm-2 col-form-label">NIK</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control" id="nik" name="nik" value="<?php echo $data['nik']; ?>" readonly required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3">
                                             <label class="col-sm-2 col-form-label">Nama</label>
                                             <div class="col-sm-6">
                                                 <input type="text" class="form-control" id="nama" name="nama" value="<?php echo $data['nama']; ?>" readonly required>

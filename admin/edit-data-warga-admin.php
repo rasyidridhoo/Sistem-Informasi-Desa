@@ -753,8 +753,8 @@ if (!isset($_SESSION['login_user'])) {
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
         <script src="../assets/demo/datatables-demo.js"></script>
+
     </body>
 
     </html>
-
 <?php } ?>
